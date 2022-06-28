@@ -11,6 +11,8 @@ services:
       options:
         fluentd-address: localhost:24224
         tag: httpd.access
+    networks:
+      - traefik-net
 
   fluentd:
     build: ./fluentd
